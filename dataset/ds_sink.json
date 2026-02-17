@@ -1,0 +1,21 @@
+{
+	"name": "ds_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "sales.parquet",
+				"folderPath": "sink",
+				"fileSystem": "testing"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
